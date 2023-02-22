@@ -4,181 +4,182 @@ Recently I was approached with the task of understanding what were the resource 
 
 Below is a table that shows the resource definition and then if defined in OpenShift, MicroShift or both, the corresponding API version.
 
-| OpenShift Resource 4.11.26 | API Version | Microshift Resource 4.12 | API Version |
+| Resource | OpenShift 4.11 | Microshift 4.12 | API Version |
 | ------------------ | ----------- | ------------------- | ----------- |
-| alertmanagerconfigs | monitoring.coreos.com/v1alpha1, monitoring.coreos.com/v1beta1  | NA | NA   |
-| alertmanagers | monitoring.coreos.com/v1   | NA | NA   |
-| apirequestcounts | apiserver.openshift.io/v1   | NA | NA   |
-| apiservers | config.openshift.io/v1   | NA | NA   |
-| apiservices | apiregistration.k8s.io/v1   | apiservices | apiregistration.k8s.io/v1   |
-| appliedclusterresourcequotas | quota.openshift.io/v1   | NA | NA   |
-| authentications | config.openshift.io/v1, operator.openshift.io/v1  | NA | NA   |
-| baremetalhosts | metal3.io/v1alpha1   | NA | NA   |
-| bmceventsubscriptions | metal3.io/v1alpha1   | NA | NA   |
-| brokertemplateinstances | template.openshift.io/v1   | NA | NA   |
-| buildconfigs | build.openshift.io/v1   | NA | NA   |
-| builds | build.openshift.io/v1, config.openshift.io/v1  | NA | NA   |
-| catalogsources | operators.coreos.com/v1alpha1   | NA | NA   |
-| certificatesigningrequests | certificates.k8s.io/v1   | certificatesigningrequests | certificates.k8s.io/v1   |
-| cloudcredentials | operator.openshift.io/v1   | NA | NA   |
-| clusterautoscalers | autoscaling.openshift.io/v1   | NA | NA   |
-| clustercsidrivers | operator.openshift.io/v1   | NA | NA   |
-| clusteroperators | config.openshift.io/v1   | NA | NA   |
-| clusterresourcequotas | quota.openshift.io/v1   | NA | NA   |
-| clusterrolebindings | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  | clusterrolebindings | rbac.authorization.k8s.io/v1   |
-| clusterroles | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  | clusterroles | rbac.authorization.k8s.io/v1   |
-| clusterserviceversions | operators.coreos.com/v1alpha1   | NA | NA   |
-| clusterversions | config.openshift.io/v1   | NA | NA   |
-| componentstatuses | v1   | componentstatuses | v1   |
-| configmaps | v1   | configmaps | v1   |
-| configs | imageregistry.operator.openshift.io/v1, operator.openshift.io/v1, samples.operator.openshift.io/v1 | NA | NA   |
-| consoleclidownloads | console.openshift.io/v1   | NA | NA   |
-| consoleexternalloglinks | console.openshift.io/v1   | NA | NA   |
-| consolelinks | console.openshift.io/v1   | NA | NA   |
-| consolenotifications | console.openshift.io/v1   | NA | NA   |
-| consoleplugins | console.openshift.io/v1alpha1   | NA | NA   |
-| consolequickstarts | console.openshift.io/v1   | NA | NA   |
-| consoles | config.openshift.io/v1, operator.openshift.io/v1  | NA | NA   |
-| consoleyamlsamples | console.openshift.io/v1   | NA | NA   |
-| containerruntimeconfigs | machineconfiguration.openshift.io/v1   | NA | NA   |
-| controllerconfigs | machineconfiguration.openshift.io/v1   | NA | NA   |
-| controllerrevisions | apps/v1   | controllerrevisions | apps/v1   |
-| credentialsrequests | cloudcredential.openshift.io/v1   | NA | NA   |
-| cronjobs | batch/v1, batch/v1beta1  | cronjobs | batch/v1   |
-| csidrivers | storage.k8s.io/v1   | csidrivers | storage.k8s.io/v1   |
-| csinodes | storage.k8s.io/v1   | csinodes | storage.k8s.io/v1   |
-| csisnapshotcontrollers | operator.openshift.io/v1   | NA | NA   |
-| csistoragecapacities | storage.k8s.io/v1, storage.k8s.io/v1beta1  | csistoragecapacities | storage.k8s.io/v1, storage.k8s.io/v1beta1  |
-| customresourcedefinitions | apiextensions.k8s.io/v1   | customresourcedefinitions | apiextensions.k8s.io/v1   |
-| daemonsets | apps/v1   | daemonsets | apps/v1   |
-| deploymentconfigs | apps.openshift.io/v1   | NA | NA   |
-| deployments | apps/v1   | deployments | apps/v1   |
-| dnses | config.openshift.io/v1, operator.openshift.io/v1  | NA | NA   |
-| dnsrecords | ingress.operator.openshift.io/v1   | NA | NA   |
-| egressfirewalls | k8s.ovn.org/v1   | NA | NA   |
-| egressips | k8s.ovn.org/v1   | NA | NA   |
-| egressqoses | k8s.ovn.org/v1   | NA | NA   |
-| egressrouters | network.operator.openshift.io/v1   | NA | NA   |
-| endpoints | v1   | endpoints | v1   |
-| endpointslices | discovery.k8s.io/v1, discovery.k8s.io/v1beta1  | endpointslices | discovery.k8s.io/v1   |
-| etcds | operator.openshift.io/v1   | NA | NA   |
-| events | v1, events.k8s.io/v1, events.k8s.io/v1beta1 | events | v1, events.k8s.io/v1  |
-| featuregates | config.openshift.io/v1   | NA | NA   |
-| firmwareschemas | metal3.io/v1alpha1   | NA | NA   |
-| flowschemas | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  | flowschemas | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  |
-| groups | user.openshift.io/v1   | NA | NA   |
-| helmchartrepositories | helm.openshift.io/v1beta1   | NA | NA   |
-| horizontalpodautoscalers | autoscaling/v1, autoscaling/v2, autoscaling/v2beta1, | horizontalpodautoscalers | autoscaling/v1, autoscaling/v2, autoscaling/v2beta2 |
-| hostfirmwaresettings | metal3.io/v1alpha1   | NA | NA   |
-| identities | user.openshift.io/v1   | NA | NA   |
-| imagecontentpolicies | config.openshift.io/v1   | NA | NA   |
-| imagecontentsourcepolicies | operator.openshift.io/v1alpha1   | NA | NA   |
-| imagepruners | imageregistry.operator.openshift.io/v1   | NA | NA   |
-| images | config.openshift.io/v1, image.openshift.io/v1  | NA | NA   |
-| imagesignatures | image.openshift.io/v1   | NA | NA   |
-| imagestreams | image.openshift.io/v1   | NA | NA   |
-| imagestreamtags | image.openshift.io/v1   | NA | NA   |
-| imagetags | image.openshift.io/v1   | NA | NA   |
-| infrastructures | config.openshift.io/v1   | NA | NA   |
-| ingressclasses | networking.k8s.io/v1   | ingressclasses | networking.k8s.io/v1   |
-| ingresscontrollers | operator.openshift.io/v1   | NA | NA   |
-| ingresses | config.openshift.io/v1, networking.k8s.io/v1  | ingresses | networking.k8s.io/v1   |
-| installplans | operators.coreos.com/v1alpha1   | NA | NA   |
-| ippools | whereabouts.cni.cncf.io/v1alpha1   | NA | NA   |
-| jobs | batch/v1   | jobs | batch/v1   |
-| kubeapiservers | operator.openshift.io/v1   | NA | NA   |
-| kubecontrollermanagers | operator.openshift.io/v1   | NA | NA   |
-| kubeletconfigs | machineconfiguration.openshift.io/v1   | NA | NA   |
-| kubeschedulers | operator.openshift.io/v1   | NA | NA   |
-| kubestorageversionmigrators | operator.openshift.io/v1   | NA | NA   |
-| leases | coordination.k8s.io/v1   | leases | coordination.k8s.io/v1   |
-| limitranges | v1   | limitranges | v1   |
-| machineautoscalers | autoscaling.openshift.io/v1beta1   | NA | NA   |
-| machineconfigpools | machineconfiguration.openshift.io/v1   | NA | NA   |
-| machineconfigs | machineconfiguration.openshift.io/v1   | NA | NA   |
-| machinehealthchecks | machine.openshift.io/v1beta1   | NA | NA   |
-| machines | machine.openshift.io/v1beta1   | NA | NA   |
-| machinesets | machine.openshift.io/v1beta1   | NA | NA   |
-| mutatingwebhookconfigurations | admissionregistration.k8s.io/v1   | mutatingwebhookconfigurations | admissionregistration.k8s.io/v1   |
-| namespaces | v1   | namespaces | v1   |
-| network-attachment-definitions | k8s.cni.cncf.io/v1   | NA | NA   |
-| networkpolicies | networking.k8s.io/v1   | networkpolicies | networking.k8s.io/v1   |
-| networks | config.openshift.io/v1, operator.openshift.io/v1  | NA | NA   |
-| nodes | v1, config.openshift.io/v1, metrics.k8s.io/v1beta1 | nodes | v1   |
-| oauthaccesstokens | oauth.openshift.io/v1   | NA | NA   |
-| oauthauthorizetokens | oauth.openshift.io/v1   | NA | NA   |
-| oauthclientauthorizations | oauth.openshift.io/v1   | NA | NA   |
-| oauthclients | oauth.openshift.io/v1   | NA | NA   |
-| oauths | config.openshift.io/v1   | NA | NA   |
-| olmconfigs | operators.coreos.com/v1   | NA | NA   |
-| openshiftapiservers | operator.openshift.io/v1   | NA | NA   |
-| openshiftcontrollermanagers | operator.openshift.io/v1   | NA | NA   |
-| operatorconditions | operators.coreos.com/v1, operators.coreos.com/v2  | NA | NA   |
-| operatorgroups | operators.coreos.com/v1, operators.coreos.com/v1alpha2  | NA | NA   |
-| operatorhubs | config.openshift.io/v1   | NA | NA   |
-| operatorpkis | network.operator.openshift.io/v1   | NA | NA   |
-| operators | operators.coreos.com/v1   | NA | NA   |
-| overlappingrangeipreservations | whereabouts.cni.cncf.io/v1alpha1   | NA | NA   |
-| packagemanifests | packages.operators.coreos.com/v1   | NA | NA   |
-| performanceprofiles | performance.openshift.io/v1, performance.openshift.io/v1alpha1, performance.openshift.io/v2 | NA | NA   |
-| persistentvolumeclaims | v1   | persistentvolumeclaims | v1   |
-| persistentvolumes | v1   | persistentvolumes | v1   |
-| poddisruptionbudgets | policy/v1, policy/v1beta1  | poddisruptionbudgets | policy/v1   |
-| podmonitors | monitoring.coreos.com/v1   | NA | NA   |
-| podnetworkconnectivitychecks | controlplane.operator.openshift.io/v1alpha1   | NA | NA   |
-| pods | v1, metrics.k8s.io/v1beta1  | pods | v1   |
-| podsecuritypolicies | policy/v1beta1   | NA | NA   |
-| podtemplates | v1   | podtemplates | v1   |
-| preprovisioningimages | metal3.io/v1alpha1   | NA | NA   |
-| priorityclasses | scheduling.k8s.io/v1   | priorityclasses | scheduling.k8s.io/v1   |
-| prioritylevelconfigurations | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  | prioritylevelconfigurations | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  |
-| probes | monitoring.coreos.com/v1   | NA | NA   |
-| profiles | tuned.openshift.io/v1   | NA | NA   |
-| projecthelmchartrepositories | helm.openshift.io/v1beta1   | NA | NA   |
-| projectrequests | project.openshift.io/v1   | NA | NA   |
-| projects | config.openshift.io/v1, project.openshift.io/v1  | NA | NA   |
-| prometheuses | monitoring.coreos.com/v1   | NA | NA   |
-| prometheusrules | monitoring.coreos.com/v1   | NA | NA   |
-| provisionings | metal3.io/v1alpha1   | NA | NA   |
-| proxies | config.openshift.io/v1   | NA | NA   |
-| rangeallocations | security.internal.openshift.io/v1, security.openshift.io/v1  | rangeallocations | security.internal.openshift.io/v1   |
-| replicasets | apps/v1   | replicasets | apps/v1   |
-| replicationcontrollers | v1   | replicationcontrollers | v1   |
-| resourceaccessreviews | authorization.openshift.io/v1   | NA | NA   |
-| resourcequotas | v1   | resourcequotas | v1   |
-| rolebindingrestrictions | authorization.openshift.io/v1   | NA | NA   |
-| rolebindings | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  | rolebindings | rbac.authorization.k8s.io/v1   |
-| roles | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  | roles | rbac.authorization.k8s.io/v1   |
-| routes | route.openshift.io/v1   | routes | route.openshift.io/v1   |
-| runtimeclasses | node.k8s.io/v1, node.k8s.io/v1beta1  | runtimeclasses | node.k8s.io/v1   |
-| schedulers | config.openshift.io/v1   | NA | NA   |
-| secrets | v1   | secrets | v1   |
-| securitycontextconstraints | security.openshift.io/v1   | securitycontextconstraints | security.openshift.io/v1   |
-| selfsubjectaccessreviews | authorization.k8s.io/v1   | selfsubjectaccessreviews | authorization.k8s.io/v1   |
-| selfsubjectrulesreviews | authorization.k8s.io/v1   | selfsubjectrulesreviews | authorization.k8s.io/v1   |
-| serviceaccounts | v1   | serviceaccounts | v1   |
-| servicecas | operator.openshift.io/v1   | NA | NA   |
-| servicemonitors | monitoring.coreos.com/v1   | NA | NA   |
-| services | v1   | services | v1   |
-| statefulsets | apps/v1   | statefulsets | apps/v1   |
-| storageclasses | storage.k8s.io/v1   | storageclasses | storage.k8s.io/v1   |
-| storages | operator.openshift.io/v1   | NA | NA   |
-| storagestates | migration.k8s.io/v1alpha1   | NA | NA   |
-| storageversionmigrations | migration.k8s.io/v1alpha1   | NA | NA   |
-| subjectaccessreviews | authorization.k8s.io/v1, authorization.openshift.io/v1  | subjectaccessreviews | authorization.k8s.io/v1   |
-| subscriptions | operators.coreos.com/v1alpha1   | NA | NA   |
-| templateinstances | template.openshift.io/v1   | NA | NA   |
-| templates | template.openshift.io/v1   | NA | NA   |
-| thanosrulers | monitoring.coreos.com/v1   | NA | NA   |
-| tokenreviews | authentication.k8s.io/v1, oauth.openshift.io/v1  | tokenreviews | authentication.k8s.io/v1   |
-| tuneds | tuned.openshift.io/v1   | NA | NA   |
-| useridentitymappings | user.openshift.io/v1   | NA | NA   |
-| useroauthaccesstokens | oauth.openshift.io/v1   | NA | NA   |
-| users | user.openshift.io/v1   | NA | NA   |
-| validatingwebhookconfigurations | admissionregistration.k8s.io/v1   | validatingwebhookconfigurations | admissionregistration.k8s.io/v1   |
-| volumeattachments | storage.k8s.io/v1   | volumeattachments | storage.k8s.io/v1   |
-| volumesnapshotclasses | snapshot.storage.k8s.io/v1   | NA | NA   |
-| volumesnapshotcontents | snapshot.storage.k8s.io/v1   | NA | NA   |
-| volumesnapshots | snapshot.storage.k8s.io/v1   | NA | NA   |
+| RESOURCE | Yes | Yes | API VERSIONS  |
+| alertmanagerconfigs | Yes | No | monitoring.coreos.com/v1alpha1, monitoring.coreos.com/v1beta1  |
+| alertmanagers | Yes | No | monitoring.coreos.com/v1   |
+| apirequestcounts | Yes | No | apiserver.openshift.io/v1   |
+| apiservers | Yes | No | config.openshift.io/v1   |
+| apiservices | Yes | Yes | apiregistration.k8s.io/v1   |
+| appliedclusterresourcequotas | Yes | No | quota.openshift.io/v1   |
+| authentications | Yes | No | config.openshift.io/v1, operator.openshift.io/v1  |
+| baremetalhosts | Yes | No | metal3.io/v1alpha1   |
+| bmceventsubscriptions | Yes | No | metal3.io/v1alpha1   |
+| brokertemplateinstances | Yes | No | template.openshift.io/v1   |
+| buildconfigs | Yes | No | build.openshift.io/v1   |
+| builds | Yes | No | build.openshift.io/v1, config.openshift.io/v1  |
+| catalogsources | Yes | No | operators.coreos.com/v1alpha1   |
+| certificatesigningrequests | Yes | Yes | certificates.k8s.io/v1   |
+| cloudcredentials | Yes | No | operator.openshift.io/v1   |
+| clusterautoscalers | Yes | No | autoscaling.openshift.io/v1   |
+| clustercsidrivers | Yes | No | operator.openshift.io/v1   |
+| clusteroperators | Yes | No | config.openshift.io/v1   |
+| clusterresourcequotas | Yes | No | quota.openshift.io/v1   |
+| clusterrolebindings | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
+| clusterroles | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
+| clusterserviceversions | Yes | No | operators.coreos.com/v1alpha1   |
+| clusterversions | Yes | No | config.openshift.io/v1   |
+| componentstatuses | Yes | Yes | v1   |
+| configmaps | Yes | Yes | v1   |
+| configs | Yes | No | imageregistry.operator.openshift.io/v1, operator.openshift.io/v1, samples.operator.openshift.io/v1 |
+| consoleclidownloads | Yes | No | console.openshift.io/v1   |
+| consoleexternalloglinks | Yes | No | console.openshift.io/v1   |
+| consolelinks | Yes | No | console.openshift.io/v1   |
+| consolenotifications | Yes | No | console.openshift.io/v1   |
+| consoleplugins | Yes | No | console.openshift.io/v1alpha1   |
+| consolequickstarts | Yes | No | console.openshift.io/v1   |
+| consoles | Yes | No | config.openshift.io/v1, operator.openshift.io/v1  |
+| consoleyamlsamples | Yes | No | console.openshift.io/v1   |
+| containerruntimeconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
+| controllerconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
+| controllerrevisions | Yes | Yes | apps/v1   |
+| credentialsrequests | Yes | No | cloudcredential.openshift.io/v1   |
+| cronjobs | Yes | Yes | batch/v1, batch/v1beta1  |
+| csidrivers | Yes | Yes | storage.k8s.io/v1   |
+| csinodes | Yes | Yes | storage.k8s.io/v1   |
+| csisnapshotcontrollers | Yes | No | operator.openshift.io/v1   |
+| csistoragecapacities | Yes | Yes | storage.k8s.io/v1, storage.k8s.io/v1beta1  |
+| customresourcedefinitions | Yes | Yes | apiextensions.k8s.io/v1   |
+| daemonsets | Yes | Yes | apps/v1   |
+| deploymentconfigs | Yes | No | apps.openshift.io/v1   |
+| deployments | Yes | Yes | apps/v1   |
+| dnses | Yes | No | config.openshift.io/v1, operator.openshift.io/v1  |
+| dnsrecords | Yes | No | ingress.operator.openshift.io/v1   |
+| egressfirewalls | Yes | No | k8s.ovn.org/v1   |
+| egressips | Yes | No | k8s.ovn.org/v1   |
+| egressqoses | Yes | No | k8s.ovn.org/v1   |
+| egressrouters | Yes | No | network.operator.openshift.io/v1   |
+| endpoints | Yes | Yes | v1   |
+| endpointslices | Yes | Yes | discovery.k8s.io/v1, discovery.k8s.io/v1beta1  |
+| etcds | Yes | No | operator.openshift.io/v1   |
+| events | Yes | Yes | v1, events.k8s.io/v1, events.k8s.io/v1beta1 |
+| featuregates | Yes | No | config.openshift.io/v1   |
+| firmwareschemas | Yes | No | metal3.io/v1alpha1   |
+| flowschemas | Yes | Yes | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  |
+| groups | Yes | No | user.openshift.io/v1   |
+| helmchartrepositories | Yes | No | helm.openshift.io/v1beta1   |
+| horizontalpodautoscalers | Yes | Yes | autoscaling/v1, autoscaling/v2, autoscaling/v2beta1, |
+| hostfirmwaresettings | Yes | No | metal3.io/v1alpha1   |
+| identities | Yes | No | user.openshift.io/v1   |
+| imagecontentpolicies | Yes | No | config.openshift.io/v1   |
+| imagecontentsourcepolicies | Yes | No | operator.openshift.io/v1alpha1   |
+| imagepruners | Yes | No | imageregistry.operator.openshift.io/v1   |
+| images | Yes | No | config.openshift.io/v1, image.openshift.io/v1  |
+| imagesignatures | Yes | No | image.openshift.io/v1   |
+| imagestreams | Yes | No | image.openshift.io/v1   |
+| imagestreamtags | Yes | No | image.openshift.io/v1   |
+| imagetags | Yes | No | image.openshift.io/v1   |
+| infrastructures | Yes | No | config.openshift.io/v1   |
+| ingressclasses | Yes | Yes | networking.k8s.io/v1   |
+| ingresscontrollers | Yes | No | operator.openshift.io/v1   |
+| ingresses | Yes | Yes | config.openshift.io/v1, networking.k8s.io/v1  |
+| installplans | Yes | No | operators.coreos.com/v1alpha1   |
+| ippools | Yes | No | whereabouts.cni.cncf.io/v1alpha1   |
+| jobs | Yes | Yes | batch/v1   |
+| kubeapiservers | Yes | No | operator.openshift.io/v1   |
+| kubecontrollermanagers | Yes | No | operator.openshift.io/v1   |
+| kubeletconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
+| kubeschedulers | Yes | No | operator.openshift.io/v1   |
+| kubestorageversionmigrators | Yes | No | operator.openshift.io/v1   |
+| leases | Yes | Yes | coordination.k8s.io/v1   |
+| limitranges | Yes | Yes | v1   |
+| machineautoscalers | Yes | No | autoscaling.openshift.io/v1beta1   |
+| machineconfigpools | Yes | No | machineconfiguration.openshift.io/v1   |
+| machineconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
+| machinehealthchecks | Yes | No | machine.openshift.io/v1beta1   |
+| machines | Yes | No | machine.openshift.io/v1beta1   |
+| machinesets | Yes | No | machine.openshift.io/v1beta1   |
+| mutatingwebhookconfigurations | Yes | Yes | admissionregistration.k8s.io/v1   |
+| namespaces | Yes | Yes | v1   |
+| network-attachment-definitions | Yes | No | k8s.cni.cncf.io/v1   |
+| networkpolicies | Yes | Yes | networking.k8s.io/v1   |
+| networks | Yes | No | config.openshift.io/v1, operator.openshift.io/v1  |
+| nodes | Yes | Yes | v1, config.openshift.io/v1, metrics.k8s.io/v1beta1 |
+| oauthaccesstokens | Yes | No | oauth.openshift.io/v1   |
+| oauthauthorizetokens | Yes | No | oauth.openshift.io/v1   |
+| oauthclientauthorizations | Yes | No | oauth.openshift.io/v1   |
+| oauthclients | Yes | No | oauth.openshift.io/v1   |
+| oauths | Yes | No | config.openshift.io/v1   |
+| olmconfigs | Yes | No | operators.coreos.com/v1   |
+| openshiftapiservers | Yes | No | operator.openshift.io/v1   |
+| openshiftcontrollermanagers | Yes | No | operator.openshift.io/v1   |
+| operatorconditions | Yes | No | operators.coreos.com/v1, operators.coreos.com/v2  |
+| operatorgroups | Yes | No | operators.coreos.com/v1, operators.coreos.com/v1alpha2  |
+| operatorhubs | Yes | No | config.openshift.io/v1   |
+| operatorpkis | Yes | No | network.operator.openshift.io/v1   |
+| operators | Yes | No | operators.coreos.com/v1   |
+| overlappingrangeipreservations | Yes | No | whereabouts.cni.cncf.io/v1alpha1   |
+| packagemanifests | Yes | No | packages.operators.coreos.com/v1   |
+| performanceprofiles | Yes | No | performance.openshift.io/v1, performance.openshift.io/v1alpha1, performance.openshift.io/v2 |
+| persistentvolumeclaims | Yes | Yes | v1   |
+| persistentvolumes | Yes | Yes | v1   |
+| poddisruptionbudgets | Yes | Yes | policy/v1, policy/v1beta1  |
+| podmonitors | Yes | No | monitoring.coreos.com/v1   |
+| podnetworkconnectivitychecks | Yes | No | controlplane.operator.openshift.io/v1alpha1   |
+| pods | Yes | Yes | v1, metrics.k8s.io/v1beta1  |
+| podsecuritypolicies | Yes | No | policy/v1beta1   |
+| podtemplates | Yes | Yes | v1   |
+| preprovisioningimages | Yes | No | metal3.io/v1alpha1   |
+| priorityclasses | Yes | Yes | scheduling.k8s.io/v1   |
+| prioritylevelconfigurations | Yes | Yes | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  |
+| probes | Yes | No | monitoring.coreos.com/v1   |
+| profiles | Yes | No | tuned.openshift.io/v1   |
+| projecthelmchartrepositories | Yes | No | helm.openshift.io/v1beta1   |
+| projectrequests | Yes | No | project.openshift.io/v1   |
+| projects | Yes | No | config.openshift.io/v1, project.openshift.io/v1  |
+| prometheuses | Yes | No | monitoring.coreos.com/v1   |
+| prometheusrules | Yes | No | monitoring.coreos.com/v1   |
+| provisionings | Yes | No | metal3.io/v1alpha1   |
+| proxies | Yes | No | config.openshift.io/v1   |
+| rangeallocations | Yes | Yes | security.internal.openshift.io/v1, security.openshift.io/v1  |
+| replicasets | Yes | Yes | apps/v1   |
+| replicationcontrollers | Yes | Yes | v1   |
+| resourceaccessreviews | Yes | No | authorization.openshift.io/v1   |
+| resourcequotas | Yes | Yes | v1   |
+| rolebindingrestrictions | Yes | No | authorization.openshift.io/v1   |
+| rolebindings | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
+| roles | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
+| routes | Yes | Yes | route.openshift.io/v1   |
+| runtimeclasses | Yes | Yes | node.k8s.io/v1, node.k8s.io/v1beta1  |
+| schedulers | Yes | No | config.openshift.io/v1   |
+| secrets | Yes | Yes | v1   |
+| securitycontextconstraints | Yes | Yes | security.openshift.io/v1   |
+| selfsubjectaccessreviews | Yes | Yes | authorization.k8s.io/v1   |
+| selfsubjectrulesreviews | Yes | Yes | authorization.k8s.io/v1   |
+| serviceaccounts | Yes | Yes | v1   |
+| servicecas | Yes | No | operator.openshift.io/v1   |
+| servicemonitors | Yes | No | monitoring.coreos.com/v1   |
+| services | Yes | Yes | v1   |
+| statefulsets | Yes | Yes | apps/v1   |
+| storageclasses | Yes | Yes | storage.k8s.io/v1   |
+| storages | Yes | No | operator.openshift.io/v1   |
+| storagestates | Yes | No | migration.k8s.io/v1alpha1   |
+| storageversionmigrations | Yes | No | migration.k8s.io/v1alpha1   |
+| subjectaccessreviews | Yes | Yes | authorization.k8s.io/v1, authorization.openshift.io/v1  |
+| subscriptions | Yes | No | operators.coreos.com/v1alpha1   |
+| templateinstances | Yes | No | template.openshift.io/v1   |
+| templates | Yes | No | template.openshift.io/v1   |
+| thanosrulers | Yes | No | monitoring.coreos.com/v1   |
+| tokenreviews | Yes | Yes | authentication.k8s.io/v1, oauth.openshift.io/v1  |
+| tuneds | Yes | No | tuned.openshift.io/v1   |
+| useridentitymappings | Yes | No | user.openshift.io/v1   |
+| useroauthaccesstokens | Yes | No | oauth.openshift.io/v1   |
+| users | Yes | No | user.openshift.io/v1   |
+| validatingwebhookconfigurations | Yes | Yes | admissionregistration.k8s.io/v1   |
+| volumeattachments | Yes | Yes | storage.k8s.io/v1   |
+| volumesnapshotclasses | Yes | No | snapshot.storage.k8s.io/v1   |
+| volumesnapshotcontents | Yes | No | snapshot.storage.k8s.io/v1   |
+| volumesnapshots | Yes | No | snapshot.storage.k8s.io/v1   |
 
 
