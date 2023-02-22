@@ -4,7 +4,7 @@ Recently I was approached with the task of understanding what were the resource 
 
 Below is a table that shows the resource definition and then if defined in OpenShift, MicroShift or both, the corresponding API version.
 
-| Resource | OpenShift 4.11 | Microshift 4.12 | API Version |
+| Resource | OpenShift 4.12 | Microshift 4.12 | API Version |
 | ------------------ | ----------- | ------------------- | ----------- |
 | alertmanagerconfigs | Yes | No | monitoring.coreos.com/v1alpha1, monitoring.coreos.com/v1beta1  |
 | alertmanagers | Yes | No | monitoring.coreos.com/v1   |
@@ -36,15 +36,16 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | consoleexternalloglinks | Yes | No | console.openshift.io/v1   |
 | consolelinks | Yes | No | console.openshift.io/v1   |
 | consolenotifications | Yes | No | console.openshift.io/v1   |
-| consoleplugins | Yes | No | console.openshift.io/v1alpha1   |
+| consoleplugins | Yes | No | console.openshift.io/v1, console.openshift.io/v1alpha1  |
 | consolequickstarts | Yes | No | console.openshift.io/v1   |
 | consoles | Yes | No | config.openshift.io/v1, operator.openshift.io/v1  |
 | consoleyamlsamples | Yes | No | console.openshift.io/v1   |
 | containerruntimeconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
 | controllerconfigs | Yes | No | machineconfiguration.openshift.io/v1   |
 | controllerrevisions | Yes | Yes | apps/v1   |
+| controlplanemachinesets | Yes | No | machine.openshift.io/v1   |
 | credentialsrequests | Yes | No | cloudcredential.openshift.io/v1   |
-| cronjobs | Yes | Yes | batch/v1, batch/v1beta1  |
+| cronjobs | Yes | Yes | batch/v1   |
 | csidrivers | Yes | Yes | storage.k8s.io/v1   |
 | csinodes | Yes | Yes | storage.k8s.io/v1   |
 | csisnapshotcontrollers | Yes | No | operator.openshift.io/v1   |
@@ -60,15 +61,16 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | egressqoses | Yes | No | k8s.ovn.org/v1   |
 | egressrouters | Yes | No | network.operator.openshift.io/v1   |
 | endpoints | Yes | Yes | v1   |
-| endpointslices | Yes | Yes | discovery.k8s.io/v1, discovery.k8s.io/v1beta1  |
+| endpointslices | Yes | Yes | discovery.k8s.io/v1   |
 | etcds | Yes | No | operator.openshift.io/v1   |
-| events | Yes | Yes | v1, events.k8s.io/v1, events.k8s.io/v1beta1 |
+| events | Yes | Yes | v1, events.k8s.io/v1  |
 | featuregates | Yes | No | config.openshift.io/v1   |
 | firmwareschemas | Yes | No | metal3.io/v1alpha1   |
 | flowschemas | Yes | Yes | flowcontrol.apiserver.k8s.io/v1beta1, flowcontrol.apiserver.k8s.io/v1beta2  |
 | groups | Yes | No | user.openshift.io/v1   |
+| hardwaredata | Yes | No | metal3.io/v1alpha1   |
 | helmchartrepositories | Yes | No | helm.openshift.io/v1beta1   |
-| horizontalpodautoscalers | Yes | Yes | autoscaling/v1, autoscaling/v2, autoscaling/v2beta1, |
+| horizontalpodautoscalers | Yes | Yes | autoscaling/v1, autoscaling/v2, autoscaling/v2beta2 |
 | hostfirmwaresettings | Yes | No | metal3.io/v1alpha1   |
 | identities | Yes | No | user.openshift.io/v1   |
 | imagecontentpolicies | Yes | No | config.openshift.io/v1   |
@@ -83,6 +85,7 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | ingressclasses | Yes | Yes | networking.k8s.io/v1   |
 | ingresscontrollers | Yes | No | operator.openshift.io/v1   |
 | ingresses | Yes | Yes | config.openshift.io/v1, networking.k8s.io/v1  |
+| insightsoperators | Yes | No | operator.openshift.io/v1   |
 | installplans | Yes | No | operators.coreos.com/v1alpha1   |
 | ippools | Yes | No | whereabouts.cni.cncf.io/v1alpha1   |
 | jobs | Yes | Yes | batch/v1   |
@@ -123,11 +126,10 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | performanceprofiles | Yes | No | performance.openshift.io/v1, performance.openshift.io/v1alpha1, performance.openshift.io/v2 |
 | persistentvolumeclaims | Yes | Yes | v1   |
 | persistentvolumes | Yes | Yes | v1   |
-| poddisruptionbudgets | Yes | Yes | policy/v1, policy/v1beta1  |
+| poddisruptionbudgets | Yes | Yes | policy/v1   |
 | podmonitors | Yes | No | monitoring.coreos.com/v1   |
 | podnetworkconnectivitychecks | Yes | No | controlplane.operator.openshift.io/v1alpha1   |
 | pods | Yes | Yes | v1, metrics.k8s.io/v1beta1  |
-| podsecuritypolicies | Yes | No | policy/v1beta1   |
 | podtemplates | Yes | Yes | v1   |
 | preprovisioningimages | Yes | No | metal3.io/v1alpha1   |
 | priorityclasses | Yes | Yes | scheduling.k8s.io/v1   |
@@ -150,7 +152,7 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | rolebindings | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
 | roles | Yes | Yes | authorization.openshift.io/v1, rbac.authorization.k8s.io/v1  |
 | routes | Yes | Yes | route.openshift.io/v1   |
-| runtimeclasses | Yes | Yes | node.k8s.io/v1, node.k8s.io/v1beta1  |
+| runtimeclasses | Yes | Yes | node.k8s.io/v1   |
 | schedulers | Yes | No | config.openshift.io/v1   |
 | secrets | Yes | Yes | v1   |
 | securitycontextconstraints | Yes | Yes | security.openshift.io/v1   |
@@ -180,5 +182,6 @@ Below is a table that shows the resource definition and then if defined in OpenS
 | volumesnapshotclasses | Yes | No | snapshot.storage.k8s.io/v1   |
 | volumesnapshotcontents | Yes | No | snapshot.storage.k8s.io/v1   |
 | volumesnapshots | Yes | No | snapshot.storage.k8s.io/v1   |
+
 
 
