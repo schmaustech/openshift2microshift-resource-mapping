@@ -6,7 +6,6 @@ Below is a table that shows the resource definition and then if defined in OpenS
 
 | Resource | OpenShift 4.11 | Microshift 4.12 | API Version |
 | ------------------ | ----------- | ------------------- | ----------- |
-| RESOURCE | Yes | Yes | API VERSIONS  |
 | alertmanagerconfigs | Yes | No | monitoring.coreos.com/v1alpha1, monitoring.coreos.com/v1beta1  |
 | alertmanagers | Yes | No | monitoring.coreos.com/v1   |
 | apirequestcounts | Yes | No | apiserver.openshift.io/v1   |
