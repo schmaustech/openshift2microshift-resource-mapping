@@ -4,7 +4,7 @@ Recently I was approached with the task of understanding what were the resource 
 
 Below is a table that shows the resource definition and then if defined in OpenShift, MicroShift or both, the corresponding API version.
 
-| OpenShift Resource | API Version | Microshift Resource | API Version |
+| OpenShift Resource 4.11.26 | API Version | Microshift Resource 4.12 | API Version |
 | ------------------ | ----------- | ------------------- | ----------- |
 | alertmanagerconfigs | monitoring.coreos.com/v1alpha1, monitoring.coreos.com/v1beta1  | NA | NA   |
 | alertmanagers | monitoring.coreos.com/v1   | NA | NA   |
